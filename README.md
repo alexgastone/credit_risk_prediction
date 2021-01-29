@@ -43,3 +43,5 @@ Typical data from the applicant includes whether they own a property, a car, mar
 7. Predict on test set and check performance
 8. Create and customize [Explainer Dashboard](https://medium.com/analytics-vidhya/explainer-dashboard-build-interactive-dashboards-for-machine-learning-models-fda63e0eab9) with chosen model
 9. Deploy Dashboard with Flask (gunicorn)
+
+*Currently: Further feature engineering to increase performance on F1 score, explore other data augemtation techniques (or re-balancing of classes).*
