@@ -43,13 +43,16 @@ def join_df(df_app, df_credit):
     return df
 
 def main():
+    print('Loading data...')
     df_app = pd.read_csv("application_record.csv")
     df_credit = pd.read_csv("credit_record.csv")
 
+    print('Preparing data... \n')
     df_app = clean_app(df_app)
     df_credit = clean_credit(df_credit)
 
     df = join_df(df_app, df_credit)
+    df.columns = map(str.title, df.columns)
 
     return df
 
