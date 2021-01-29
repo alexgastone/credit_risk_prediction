@@ -1,0 +1,33 @@
+dashboard:
+  explainerfile: None
+  params:
+    title: Credit Explainer
+    name: null
+    description: "This dashboard shows the workings of a fitted\n            machine\
+      \ learning model, and explains its predictions."
+    hide_header: false
+    header_hide_title: false
+    header_hide_selector: false
+    hide_poweredby: false
+    block_selector_callbacks: false
+    pos_label: null
+    fluid: true
+    mode: external
+    width: 1000
+    height: 800
+    bootstrap: https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css
+    external_stylesheets: null
+    url_base_pathname: null
+    responsive: true
+    logins: null
+    port: 8050
+    importances: true
+    model_summary: true
+    contributions: true
+    whatif: false
+    shap_dependence: false
+    shap_interaction: false
+    decision_trees: false
+    kwargs:
+      hide_pdp: true
+    tabs: null
