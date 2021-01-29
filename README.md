@@ -10,6 +10,11 @@ A lot of the variables that go into credit scoring, however, are not always very
 
 **Therefore, the goal of this project is to better understand both the credit score prediction process and the effect of certain variables on that score.**
 
+## Run locally
+To run your own dashboard, 
+1. Clone this repo 
+2. Run `$python generate_explainer.py`, can specify desired port (default is 8052)
+
 ## Data
 
 The [dataset](https://www.kaggle.com/rikdifos/credit-card-approval-prediction), available from Kaggle, includes (anonymized) personal information and data submitted by credit card applicants, labeled with the status of their defaults.
@@ -43,5 +48,14 @@ Typical data from the applicant includes whether they own a property, a car, mar
 7. Predict on test set and check performance
 8. Create and customize [Explainer Dashboard](https://medium.com/analytics-vidhya/explainer-dashboard-build-interactive-dashboards-for-machine-learning-models-fda63e0eab9) with chosen model
 9. Deploy Dashboard with Flask (gunicorn)
+
+## Files
+* `application_record.csv` and `credit_record.csv` : data files
+* `data_prep.py` : load and clean data
+* `train_model.py` : train Random Forest model (highest CV score - 0.94) on training (balanced) data
+* `generate_explainer.py` : generates and saves Explainer & Dashboard. Run locally on port=8052 or can alternatively load Flask app / dash
+	* saved to defaults `explainer.joblib` and `dashboard.yaml`
+* `hyperparams.json` : dictionary of finetuned RF hyperparameters
+* `Credit_Prediction.ipynb` : notebook with model comparisons, fine tuning, and other tests
 
 *Currently: Further feature engineering to increase performance on F1 score, explore other data augemtation techniques (or re-balancing of classes).*
